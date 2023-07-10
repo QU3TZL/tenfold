@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   filepondElements.forEach(function(element, index) {
     FilePond.create(element, {
       server: {
-        url: 'https://your-server-side-endpoint',
+        url: 'https://s3bucket.onrender.com',
         process: {
           method: 'POST',
           headers: {

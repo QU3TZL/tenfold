@@ -7,8 +7,25 @@ header {
   margin-bottom: 20px;
 }
 
-.filepond-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.filepond--root {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+@media (min-width: 768px) {
+  .filepond-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .filepond--root {
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .filepond--root:first-child {
+    grid-column: span 2;
+  }
 }

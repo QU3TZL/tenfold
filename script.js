@@ -4,18 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
   filepondElements.forEach(function(element, index) {
     FilePond.create(element, {
       server: {
-        url: 'https://renderdisk.onrender.com',
-        process: {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          },
-          onload: response => console.log(response),
-          onerror: error => console.log(error),
-          ondata: formData => {
-            formData.append('folder', 'folder' + (index + 1));
-            return formData;
-          }
+        url: 'https://flowisetoo.onrender.com',
+        process: '/uploadfiles/folder' + (index + 1),
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        onload: response => console.log(response),
+        onerror: error => console.log(error),
+        ondata: formData => {
+          formData.append('folder', 'folder' + (index + 1));
+          return formData;
         }
       },
       allowMultiple: true

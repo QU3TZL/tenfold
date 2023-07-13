@@ -8,9 +8,22 @@ header {
 }
 
 .filepond--root {
+  position: relative;
   width: 100%;
-  height: 0;
-  padding-bottom: 100%;
+}
+
+.filepond--root::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.filepond--root .filepond--root-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 @media (min-width: 768px) {
@@ -20,12 +33,11 @@ header {
     gap: 20px;
   }
 
-  .filepond--root {
-    height: auto;
-    padding-bottom: 0;
-  }
-
   .filepond--root:first-child {
     grid-column: span 2;
+  }
+
+  .filepond--root:first-child::before {
+    padding-top: 50%; /* This makes the first FilePond instance half as tall, so it spans two columns but only one row. */
   }
 }

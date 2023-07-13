@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   filepondElements.forEach(function(element, index) {
     FilePond.create(element, {
       server: {
-        url: 'https://flowisetoo.onrender.com',
+        url: 'https://renderdisk.onrender.com',
         process: '/uploadfiles/folder' + (index + 1),
         method: 'POST',
         headers: {

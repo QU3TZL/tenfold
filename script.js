@@ -1,9 +1,3 @@
-const FilePond = require('filepond');
-require('filepond-plugin-file-validate-type');
-require('filepond-plugin-file-validate-size');
-require('filepond-plugin-file-poster');
-require('filepond-plugin-image-preview');
-
 // Fetch all the FilePond elements and initialize them
 const filePonds = document.querySelectorAll('.filepond');
 

@@ -1,6 +1,8 @@
 body {
   background-color: #393A51;
   color: #FFFFFF;
+  font-family: sans-serif;
+  font-size: 9pt;
 }
 
 .filepond-container {
@@ -15,8 +17,19 @@ body {
   align-items: center;
 }
 
+/* Make the first FilePond instance span two columns */
+.filepond-wrapper:first-child {
+  grid-column: span 2;
+}
+
 .filepond--root {
   background-color: #6CC8F8;
+  color: #393A51;
+  font-family: sans-serif;
+  font-size: 13pt;
+  /* Make FilePond dropzone twice as wide as it is tall */
+  width: 200%;
+  height: 100%;
 }
 
 .filepond--root .filepond--label-action {
@@ -26,26 +39,28 @@ body {
 .filepond-name {
   margin: 10px 0;
   padding: 5px;
-  font-size: 18px;
+  font-size: 1rem; /* H1 size */
   text-align: center;
   border: 1px solid #ddd;
   border-radius: 5px;
   color: #FFFFFF;
+  background-color: #393A51;
 }
 
 table {
   width: 100%;
   margin-top: 10px;
   border-collapse: collapse;
+  background-color: #393A51; /* Same as page background */
 }
 
 table th, table td {
   border: 1px solid #66717E;
   padding: 8px;
   text-align: left;
-  color: #66717E;
+  color: #FFFFFF; /* White text */
 }
 
 table th {
-  background-color: #f2f2f2;
+  background-color: #f2f2F2;
 }

@@ -1,62 +1,80 @@
 body {
-  font-family: Arial, sans-serif;
   background-color: #383B53;
   color: #FFFFFF;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 20px;
+.filepond-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.filepond-wrapper:first-child {
+  grid-column: span 2;
 }
 
 .filepond--root {
-  position: relative;
-  width: 100%;
   background-color: #6CC8F8;
   color: #383B53;
-  font-size: 1.17em; /* Equivalent to <h3> size */
+  font-size: 1.17em;
+  font-family: sans-serif;
 }
 
-.filepond--root::before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-
-.filepond--root .filepond--root-inner {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.filepond--root .filepond--label-action {
+  color: #383B53;
 }
 
 .filepond-name {
-  background-color: #383B53;
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 2em;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   color: #FFFFFF;
-  text-transform: uppercase; /* Make text all caps */
+  background: #383B53;
+  text-transform: uppercase;
+  font-family: sans-serif;
 }
 
 table {
-  border: 0.5px solid #66717E; /* Set border color and thickness */
-  border-radius: 5px; /* Slightly round the corners */
-  background-color: #383B53;
-  color: #66717E;
-  font-size: 0.75em; /* Caption size text */
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
 }
 
-@media (min-width: 768px) {
-  .filepond-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
+table th, table td {
+  border: 1px solid #66717E;
+  padding: 8px;
+  text-align: left;
+  color: #66717E;
+  font-size: 0.75em;
+  font-family: sans-serif;
+}
 
-  .filepond--root:first-child {
-    grid-column: span 2;
-  }
+table th {
+  background-color: #f2f2f2;
+}
 
-  .filepond--root:first-child::before {
-    padding-top: 50%; /* This makes the first FilePond instance half as tall, so it spans two columns but only one row. */
+.filepond--item {
+  width: calc(50% - 0.5em);
+}
+
+@media (min-width: 30em) {
+  .filepond--item {
+    width: calc(50% - 0.5em);
   }
+}
+
+@media (min-width: 50em) {
+  .filepond--item {
+    width: calc(33.33% - 0.5em);
+  }
+}
+
+/* To position the logo image at the top center of the page */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

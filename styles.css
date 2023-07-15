@@ -1,5 +1,7 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #383B53;
+  color: #FFFFFF;
 }
 
 header {
@@ -10,6 +12,9 @@ header {
 .filepond--root {
   position: relative;
   width: 100%;
+  background-color: #6CC8F8;
+  color: #383B53;
+  font-size: 1.17em; /* Equivalent to <h3> size */
 }
 
 .filepond--root::before {
@@ -24,6 +29,20 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.filepond-name {
+  background-color: #383B53;
+  color: #FFFFFF;
+  text-transform: uppercase; /* Make text all caps */
+}
+
+table {
+  border: 0.5px solid #66717E; /* Set border color and thickness */
+  border-radius: 5px; /* Slightly round the corners */
+  background-color: #383B53;
+  color: #66717E;
+  font-size: 0.75em; /* Caption size text */
 }
 
 @media (min-width: 768px) {

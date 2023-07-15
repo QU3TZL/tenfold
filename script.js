@@ -1,23 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const filepondElements = document.querySelectorAll('.filepond');
+const filePondInstances = document.querySelectorAll('.filepond');
 
-  filepondElements.forEach(function(element, index) {
-    FilePond.create(element, {
-      server: {
-        url: 'https://renderdisk.onrender.com',
-        process: '/uploadfiles/folder' + (index + 1),
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        onload: response => console.log(response),
-        onerror: error => console.log(error),
-        ondata: formData => {
-          formData.append('folder', 'folder' + (index + 1));
-          return formData;
-        }
-      },
-      allowMultiple: true
-    });
+filePondInstances.forEach((inputElement, index) => {
+  const pond = FilePond.create(inputElement, {
+    server: {
+      url: 'https://renderdisk.onrender.com/upload',
+      process: {
+        url: `/folder${index+1}`,
+        method: 'POST'
+      }
+    }
   });
 });

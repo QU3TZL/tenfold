@@ -13,8 +13,8 @@ header img {
 /* FilePond container layout */
 .filepond-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 60px;
 }
 
 /* Adjust to one column on mobile */
@@ -25,7 +25,7 @@ header img {
 }
 
 /* Adjust to two columns on desktop */
-@media (min-width: 401px) {
+@media (min-width: 601px) {
   .filepond-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -35,18 +35,7 @@ header img {
 .filepond-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-/* FilePond instance styling */
-.filepond--root {
-  background-color: ##6CC8F8;
-  color: ##6CC8F8;
-  font-size: 10px; /* Adjust as needed */
-}
-
-.filepond--root .filepond--label-action {
-  color: ##6CC8F8;
+  align-items: left;
 }
 
 /* the background color of the filepond drop area */
@@ -78,20 +67,21 @@ header img {
   text-align: center;
   text-transform: uppercase;
   font-size: 24px; /* Adjust as needed */
-  padding: 5px;
+  padding: 100px;
   margin: 10px 0;
 }
 
 /* Markdown field styling */
 table {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 50px;
   border-collapse: collapse;
   border: 0.5px solid #66717E;
   border-radius: 5px; /* For rounded corners */
   background-color: #383B53;
   color: #66717E; /* Adjusted font color */
   font-size: 09px; /* Adjust as needed */
+  padding: 40px;
 }
 
 table th, table td {

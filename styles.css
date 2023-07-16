@@ -14,18 +14,18 @@ header img {
 .filepond-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 40px;
 }
 
 /* Adjust to one column on mobile */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .filepond-container {
     grid-template-columns: 1fr;
   }
 }
 
 /* Adjust to two columns on desktop */
-@media (min-width: 601px) {
+@media (min-width: 401px) {
   .filepond-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -40,13 +40,13 @@ header img {
 
 /* FilePond instance styling */
 .filepond--root {
-  background-color: #6CC8F8;
-  color: #383B53;
-  font-size: 18px; /* Adjust as needed */
+  background-color: ##6CC8F8;
+  color: ##6CC8F8;
+  font-size: 10px; /* Adjust as needed */
 }
 
 .filepond--root .filepond--label-action {
-  color: #383B53;
+  color: ##6CC8F8;
 }
 
 /* the background color of the filepond drop area */

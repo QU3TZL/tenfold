@@ -35,6 +35,11 @@ header img {
   color: #383B53;
 }
 
+/* the background color of the filepond drop area */
+.filepond--panel-root {
+  background-color: #6CC8F8;
+}
+
 .filepond--item {
   width: calc(50% - 0.5em);
 }
@@ -69,9 +74,9 @@ table {
   margin-top: 10px;
   border-collapse: collapse;
   border: 0.5px solid #66717E;
-  border-radius: 5px;
+  border-radius: 5px; /* For rounded corners */
   background-color: #383B53;
-  color: #66717E;
+  color: #66717E; /* Adjusted font color */
   font-size: 12px; /* Adjust as needed */
 }
 
